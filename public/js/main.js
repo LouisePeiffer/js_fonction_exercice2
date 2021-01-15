@@ -1,35 +1,52 @@
 // Exo 1
+// let chiffre = prompt('Un chiffre?')
+
 // let reverseNumber = (num) => {
-//     return num.toString().split("").reverse().join("")
+//     num = num.toString().split("").reverse().join("")
+//     return num
 // }
 
-// console.log(reverseNumber(12345));
+// let nbr = reverseNumber(chiffre)
+// alert(nbr)
 
 // Exo 2
+
+// let chiffre = parseInt(prompt('Un nombre?'))
+
 // let divPar2 = (a) => {
-//     switch (a % 2 === 0) {
-//         case true:
+//     switch (a % 2) {
+//         case 0:
 //             return "Le num x est divisible par 2"
+//         case 1:
+//             return "Le num x n'est divisible pas par 2"
 //         default: 
-//             return "Ce nombre n'est pas divisible par 2"
+//             return "Ceci n'est pas un chiffre"
 //     }
 // }
-// console.log(divPar2(5))
+
+// let result = divPar2(chiffre)
+// console.log(divPar2(chiffre))
 
 // Exo 3
-// let logIn = () => {
-//     let mdp = "badb1030"
-//     let quest = prompt('Mot de passe?')
-//         if (quest == mdp) {
-//             alert("Vous êtes connecté")
-//         } else {
-//             do {
-//                 quest2 = prompt("Essayez un autre mot de passe")
-//             } while (quest2 != mdp);
-//             alert('Bien joué')
-//     }
-// }
-// console.log(logIn());
+let mdp = "badb1030"
+let quest = prompt('Mot de passe?')
+
+let logIn = (a) => {
+        if (a == mdp) {
+            alert("Vous êtes connecté")
+        } else {
+            let count = 0
+            do {
+                a = prompt("Essayez un autre mot de passe")
+                count++
+                if (a == mdp) {
+                    alert('Bien joué')
+                }
+            } while (a != mdp && count<3);
+            
+    }
+}
+logIn(quest)
 
 // Exo 4
 
